@@ -689,6 +689,7 @@
  *
  * WARNING: Setting the wrong pin may have unexpected and potentially
  * disastrous consequences. Use with caution and do your homework.
+ *
  */
 //#define Z_MIN_PROBE_ENDSTOP
 
@@ -1278,7 +1279,6 @@
   #define NOZZLE_PARK_Z_FEEDRATE 5      // Z axis feedrate in mm/s (not used for delta printers)
 #endif
 
-
 /**
  * Clean Nozzle Feature -- EXPERIMENTAL
  *
@@ -1318,6 +1318,7 @@
  *
  */
 //#define NOZZLE_CLEAN_FEATURE
+
 #if ENABLED(NOZZLE_CLEAN_FEATURE)
   // Default number of pattern repetitions
   #define NOZZLE_CLEAN_STROKES  12
@@ -1470,7 +1471,7 @@
  *
  *  Reversed Value Edit and Menu Nav? Enable REVERSE_ENCODER_DIRECTION.
  *  Reversed Menu Navigation only?    Enable REVERSE_MENU_DIRECTION.
- *  qqReversed Value Editing only?      Enable BOTH options.
+ *  Reversed Value Editing only?      Enable BOTH options.
  */
 
 //
