@@ -44,7 +44,7 @@
   #endif
 
   #define EXTRUSION_MULTIPLIER 1.0
-  #define RETRACTION_MULTIPLIER 1.0
+  #define RETRACTION_MULTIPLIER 8.0
   #define PRIME_LENGTH 10.0
   #define OOZE_AMOUNT 0.3
 
