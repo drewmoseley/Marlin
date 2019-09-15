@@ -439,10 +439,20 @@
  */
 #if ENABLED(DISTINCT_E_FACTORS) && E_STEPPERS > 1
   #define XYZE_N (XYZ + E_STEPPERS)
+  #if ENABLED(HANGPRINTER)
+    #define NUM_AXIS_N (ABCD + E_STEPPERS)
+  #else
+    #define NUM_AXIS_N (XYZ + E_STEPPERS)
+  #endif
   #define E_AXIS_N (E_AXIS + extruder)
 #else
   #undef DISTINCT_E_FACTORS
   #define XYZE_N XYZE
+  #if ENABLED(HANGPRINTER)
+    #define NUM_AXIS_N ABCDE
+  #else
+    #define NUM_AXIS_N XYZE
+  #endif
   #define E_AXIS_N E_AXIS
 #endif
 
@@ -469,8 +479,11 @@
   #define Z_SERVO_ANGLES { BLTOUCH_DEPLOY, BLTOUCH_STOW }
 
   #define BLTOUCH_DEPLOY    10
+  #define BLTOUCH_SW_MODE   60
   #define BLTOUCH_STOW      90
   #define BLTOUCH_SELFTEST 120
+  #define BLTOUCH_5V_MODE  140
+  #define BLTOUCH_OD_MODE  150
   #define BLTOUCH_RESET    160
   #define _TEST_BLTOUCH(P) (READ(P##_PIN) != P##_ENDSTOP_INVERTING)
 
