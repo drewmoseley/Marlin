@@ -380,9 +380,9 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // Ultimaker
-  #define DEFAULT_Kp 27.60
-  #define DEFAULT_Ki 2.76
-  #define DEFAULT_Kd 68.96
+  //#define DEFAULT_Kp 27.60
+  //#define DEFAULT_Ki 2.76
+  //#define DEFAULT_Kd 68.96
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -393,6 +393,11 @@
   //#define DEFAULT_Kp 63.0
   //#define DEFAULT_Ki 2.25
   //#define DEFAULT_Kd 440
+
+  // Hypercube 300 - "M303 C8 E0 S205 U1"
+  #define DEFAULT_Kp 41.22
+  #define DEFAULT_Ki 5.35
+  #define DEFAULT_Kd 79.35
 
 #endif // PIDTEMP
 
@@ -441,10 +446,10 @@
   //#define DEFAULT_bedKi 1.41
   //#define DEFAULT_bedKd 1675.16
 
-  // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
-  #define  DEFAULT_bedKp 726.89
-  #define  DEFAULT_bedKi 115.23
-  #define  DEFAULT_bedKd 1146.31
+  // FIND YOUR OWN: "M303 C8 E-1 S60 U1"
+  #define  DEFAULT_bedKp 729.97
+  #define  DEFAULT_bedKi 64.53
+  #define  DEFAULT_bedKd 2063.08
 #endif // PIDTEMPBED
 
 // @section extruder
