@@ -907,8 +907,8 @@
 #define Y_BED_SIZE 220
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -42
-#define Y_MIN_POS -13
+#define X_MIN_POS -35
+#define Y_MIN_POS -10
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
@@ -1098,7 +1098,7 @@
   //=================================== Mesh ==================================
   //===========================================================================
 
-  #define MESH_INSET 15          // Set Mesh bounds as an inset region of the bed
+  #define MESH_INSET 25          // Set Mesh bounds as an inset region of the bed
   #define GRID_MAX_POINTS_X 3    // Don't use more than 7 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
