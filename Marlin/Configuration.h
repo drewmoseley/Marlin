@@ -395,9 +395,9 @@
   //#define DEFAULT_Kd 440
 
   // Hypercube 300 - "M303 C8 E0 S205 U1"
-  #define DEFAULT_Kp 41.22
-  #define DEFAULT_Ki 5.35
-  #define DEFAULT_Kd 79.35
+  #define DEFAULT_Kp 21.62
+  #define DEFAULT_Ki 2.13
+  #define DEFAULT_Kd 54.90
 
 #endif // PIDTEMP
 
