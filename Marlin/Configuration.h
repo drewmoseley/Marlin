@@ -395,9 +395,9 @@
   //#define DEFAULT_Kd 440
 
   // Hypercube 300 - "M303 C8 E0 S205 U1"
-  #define DEFAULT_Kp 18.18
-  #define DEFAULT_Ki 1.61
-  #define DEFAULT_Kd 51.38
+  #define DEFAULT_Kp 15.48
+  #define DEFAULT_Ki 1.09
+  #define DEFAULT_Kd 55.17
 
 #endif // PIDTEMP
 
@@ -447,9 +447,9 @@
   //#define DEFAULT_bedKd 1675.16
 
   // Hypercube 300: "M303 C8 E-1 S60 U1"
-  #define DEFAULT_bedKp 748.96
-  #define DEFAULT_bedKi 71.99
-  #define DEFAULT_bedKd 1947.94
+  #define DEFAULT_bedKp 750.52
+  #define DEFAULT_bedKi 120.55
+  #define DEFAULT_bedKd 1168.18
 #endif // PIDTEMPBED
 
 // @section extruder
