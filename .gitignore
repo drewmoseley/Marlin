@@ -181,3 +181,5 @@ cmake-build-*
 
 #Python
 __pycache__
+\#*
+.#*
