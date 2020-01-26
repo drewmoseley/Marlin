@@ -51,7 +51,7 @@
     #if ENABLED(ALTERNATIVE_LCD)
       #define U8G_CLASS U8GLIB_ST7920_128X64_4X                 // 2 stripes, SW SPI (Original u8glib device)
     #else
-      #define U8G_CLASS U8GLIB_ST7920_128X64_1X                 // See https://github.com/MarlinFirmware/Marlin/issues/15391#issuecomment-542539484
+      #define U8G_CLASS U8GLIB_ST7920_128X64_RRD                // Adjust stripes with PAGE_HEIGHT in ultralcd_st7920_u8glib_rrd.h
     #endif
     #define U8G_PARAM LCD_PINS_D4, LCD_PINS_ENABLE, LCD_PINS_RS // AVR version ignores these pin settings
                                                                 // HAL version uses these pin settings
