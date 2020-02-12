@@ -474,9 +474,9 @@
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 
   // Creality Ender-3
-  #define DEFAULT_Kp 36.87
-  #define DEFAULT_Ki 3.49
-  #define DEFAULT_Kd 97.41
+  #define DEFAULT_Kp 29.73
+  #define DEFAULT_Ki 2.11
+  #define DEFAULT_Kd 104.71
 
 #endif // PIDTEMP
 
