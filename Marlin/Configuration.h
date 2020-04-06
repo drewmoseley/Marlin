@@ -500,9 +500,9 @@
   //#define DEFAULT_Kd 440
 
   // Hypercube 300 - "M303 C8 E0 S205 U1"
-  #define DEFAULT_Kp 15.48
-  #define DEFAULT_Ki 1.09
-  #define DEFAULT_Kd 55.17
+  #define DEFAULT_Kp 12.75
+  #define DEFAULT_Ki 0.77
+  #define DEFAULT_Kd 52.46
 #endif // PIDTEMP
 
 //===========================================================================
@@ -551,9 +551,9 @@
   //#define DEFAULT_bedKd 1675.16
 
   // Hypercube 300: "M303 C8 E-1 S60 U1"
-  #define DEFAULT_bedKp 750.52
-  #define DEFAULT_bedKi 120.55
-  #define DEFAULT_bedKd 1168.18
+  #define DEFAULT_bedKp 116.59
+  #define DEFAULT_bedKi 7.88
+  #define DEFAULT_bedKd 1149.51
 #endif // PIDTEMPBED
 
 // @section extruder
@@ -956,7 +956,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 28, 8, -0.175 }
+#define NOZZLE_TO_PROBE_OFFSET { 28, 8, -0.16 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1284,7 +1284,7 @@
   //#define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
   #define MESH_INSET 10              // Set Mesh bounds as an inset region of the bed
-  #define GRID_MAX_POINTS_X 7       // Don't use more than 15 points per axis, implementation limited.
+  #define GRID_MAX_POINTS_X 10       // Don't use more than 15 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   #define UBL_MESH_EDIT_MOVES_Z     // Sophisticated users prefer no movement of nozzle
