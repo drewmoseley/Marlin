@@ -483,9 +483,9 @@
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 
   // Creality Ender-3 - M303 C5 E0 S200 U1
-  #define DEFAULT_Kp 39.37
-  #define DEFAULT_Ki 4.72
-  #define DEFAULT_Kd 82.03
+  #define DEFAULT_Kp 41.93
+  #define DEFAULT_Ki 6.38
+  #define DEFAULT_Kd 68.90
 #endif // PIDTEMP
 
 //===========================================================================
@@ -505,9 +505,9 @@
  * heater. If your configuration is significantly different than this and you don't understand
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  */
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
-#define BED_LIMIT_SWITCHING
+//#define BED_LIMIT_SWITCHING
 
 /**
  * Max Bed Power
@@ -521,11 +521,14 @@
   //#define MIN_BED_POWER 0
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
-  #define DEFAULT_bedKp 67.05
-  #define DEFAULT_bedKi 12.99
-  #define DEFAULT_bedKd 230.70
+  //#define DEFAULT_bedKp 67.05
+  //#define DEFAULT_bedKi 12.99
+  //#define DEFAULT_bedKd 230.70
 
-  // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
+  //Ender 3: M303 C8 E-1 S60 U1
+  #define DEFAULT_bedKp 48.72
+  #define DEFAULT_bedKi 9.21
+  #define DEFAULT_bedKd 171.84
 #endif // PIDTEMPBED
 
 // @section extruder
