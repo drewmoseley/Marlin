@@ -505,9 +505,9 @@
  * heater. If your configuration is significantly different than this and you don't understand
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  */
-#define PIDTEMPBED
+//#define PIDTEMPBED
 
-//#define BED_LIMIT_SWITCHING
+#define BED_LIMIT_SWITCHING
 
 /**
  * Max Bed Power
@@ -526,9 +526,9 @@
   //#define DEFAULT_bedKd 230.70
 
   //Ender 3: M303 C8 E-1 S60 U1
-  #define DEFAULT_bedKp 48.72
-  #define DEFAULT_bedKi 9.21
-  #define DEFAULT_bedKd 171.84
+  #define DEFAULT_bedKp 45.92
+  #define DEFAULT_bedKi 8.95
+  #define DEFAULT_bedKd 157.05
 #endif // PIDTEMPBED
 
 // @section extruder
