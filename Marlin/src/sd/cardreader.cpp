@@ -30,7 +30,6 @@
 #include "../lcd/ultralcd.h"
 #include "../module/planner.h"        // for synchronize
 #include "../module/printcounter.h"
-#include "../core/language.h"
 #include "../gcode/queue.h"
 #include "../module/configuration_store.h"
 
@@ -155,12 +154,13 @@ char *createFilename(char * const buffer, const dir_t &p) {
 // Return 'true' if the item is a folder or G-code file
 //
 bool CardReader::is_dir_or_gcode(const dir_t &p) {
-  uint8_t pn0 = p.name[0];
+  //uint8_t pn0 = p.name[0];
 
-  if ( pn0 == DIR_NAME_FREE || pn0 == DIR_NAME_DELETED  // Clear or Deleted entry
-    || pn0 == '.' || longFilename[0] == '.'             // Hidden file
-    || !DIR_IS_FILE_OR_SUBDIR(&p)                       // Not a File or Directory
-    || (p.attributes & DIR_ATT_HIDDEN)                  // Hidden by attribute
+  if ( (p.attributes & DIR_ATT_HIDDEN)                  // Hidden by attribute
+    // When readDir() > 0 these must be false:
+    //|| pn0 == DIR_NAME_FREE || pn0 == DIR_NAME_DELETED  // Clear or Deleted entry
+    //|| pn0 == '.' || longFilename[0] == '.'             // Hidden file
+    //|| !DIR_IS_FILE_OR_SUBDIR(&p)                       // Not a File or Directory
   ) return false;
 
   flag.filenameIsDir = DIR_IS_SUBDIR(&p);               // We know it's a File or Folder
@@ -369,13 +369,56 @@ void CardReader::mount() {
   else {
     flag.mounted = true;
     SERIAL_ECHO_MSG(STR_SD_CARD_OK);
-    #if ENABLED(SDCARD_EEPROM_EMULATION)
-      settings.first_load();
-    #endif
   }
   cdroot();
 
   ui.refresh();
+}
+
+/**
+ * Handle SD card events
+ */
+#if MB(FYSETC_CHEETAH)
+  #include "../module/stepper.h"
+#endif
+
+void CardReader::manage_media() {
+  static uint8_t prev_stat = TERN(INIT_SDCARD_ON_BOOT, 2, 0);
+  uint8_t stat = uint8_t(IS_SD_INSERTED());
+  if (stat != prev_stat && ui.detected()) {
+
+    uint8_t old_stat = prev_stat;
+    prev_stat = stat;                 // Change now to prevent re-entry
+
+    if (stat) {                       // Media Inserted
+      safe_delay(500);                // Some boards need a delay to get settled
+      mount();                        // Try to mount the media
+      #if MB(FYSETC_CHEETAH)
+        reset_stepper_drivers();      // Workaround for Cheetah bug
+      #endif
+      if (!isMounted()) stat = 0;     // Not mounted?
+    }
+    else {
+      #if PIN_EXISTS(SD_DETECT)
+        release();                    // Card is released
+      #endif
+    }
+
+    ui.media_changed(old_stat, stat); // Update the UI
+
+    if (stat) {
+      #if ENABLED(SDCARD_EEPROM_EMULATION)
+        settings.first_load();
+      #endif
+      if (old_stat == 2) {            // First mount?
+        #if ENABLED(POWER_LOSS_RECOVERY)
+          recovery.check();
+        #else
+          beginautostart();           // Look for autostart files soon
+        #endif
+      }
+    }
+  }
 }
 
 void CardReader::release() {
@@ -483,8 +526,8 @@ void CardReader::openFileRead(char * const path, const uint8_t subcall_type/*=0*
 
       // Too deep? The firmware has to bail.
       if (file_subcall_ctr > SD_PROCEDURE_DEPTH - 1) {
-        SERIAL_ERROR_MSG("trying to call sub-gcode files with too many levels. MAX level is:" STRINGIFY(SD_PROCEDURE_DEPTH));
-        kill();
+        SERIAL_ERROR_MSG("Exceeded max SUBROUTINE depth:" STRINGIFY(SD_PROCEDURE_DEPTH));
+        kill(GET_TEXT(MSG_KILL_SUBCALL_OVERFLOW));
         return;
       }
 
