@@ -492,9 +492,9 @@
 
   // ANET A8 Standard Extruder at 210 Degree Celsius and 100% Fan
   // Drew: "M303 C8 E0 S205 U1"
-  #define DEFAULT_Kp 39.01
-  #define DEFAULT_Ki 3.07
-  #define DEFAULT_Kd 123.85
+  #define DEFAULT_Kp 33.51
+  #define DEFAULT_Ki 2.96
+  #define DEFAULT_Kd 94.71
 
 #endif // PIDTEMP
 
@@ -537,10 +537,9 @@
 
   // ANET A8
   // Drew: "M303 C8 E-1 S60 U1"
-  #define DEFAULT_bedKp 66.89
-  #define DEFAULT_bedKi 13.17
-  #define DEFAULT_bedKd 226.47
-
+  #define DEFAULT_bedKp 92.63
+  #define DEFAULT_bedKi 18.24
+  #define DEFAULT_bedKd 313.66
 #endif // PIDTEMPBED
 
 // @section extruder
