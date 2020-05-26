@@ -952,11 +952,11 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { -43, -7, -2.8 }
+#define NOZZLE_TO_PROBE_OFFSET { -43, -7, -2.7 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define MIN_PROBE_EDGE 20
+#define MIN_PROBE_EDGE 10
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 10000
@@ -1088,12 +1088,12 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 235
+#define X_BED_SIZE 233
 #define Y_BED_SIZE 235
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
-#define Y_MIN_POS 0
+#define Y_MIN_POS -5
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
@@ -1279,8 +1279,8 @@
 
   //#define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
-  #define MESH_INSET 1              // Set Mesh bounds as an inset region of the bed
-  #define GRID_MAX_POINTS_X 10      // Don't use more than 15 points per axis, implementation limited.
+  #define MESH_INSET 10             // Set Mesh bounds as an inset region of the bed
+  #define GRID_MAX_POINTS_X 5       // Don't use more than 15 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   #define UBL_MESH_EDIT_MOVES_Z     // Sophisticated users prefer no movement of nozzle
