@@ -508,9 +508,10 @@
   //#define DEFAULT_Kd 440
 
   // Hypercube 300 - "M303 C8 E0 S205 U1"
-  #define DEFAULT_Kp 12.75
-  #define DEFAULT_Ki 0.77
-  #define DEFAULT_Kd 52.46
+  #define DEFAULT_Kp 13.73
+  #define DEFAULT_Ki 0.80
+  #define DEFAULT_Kd 58.62
+
 #endif // PIDTEMP
 
 //===========================================================================
@@ -559,9 +560,9 @@
   //#define DEFAULT_bedKd 1675.16
 
   // Hypercube 300: "M303 C8 E-1 S60 U1"
-  #define DEFAULT_bedKp 116.59
-  #define DEFAULT_bedKi 7.88
-  #define DEFAULT_bedKd 1149.51
+  #define DEFAULT_bedKp 158.76
+  #define DEFAULT_bedKi 11.75
+  #define DEFAULT_bedKd 1429.72
 #endif // PIDTEMPBED
 
 // @section extruder
@@ -975,7 +976,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 28, 8, -0.16 }
+#define NOZZLE_TO_PROBE_OFFSET { 28, 8, -1.86 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
