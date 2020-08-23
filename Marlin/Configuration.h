@@ -415,7 +415,7 @@
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  */
-#define TEMP_SENSOR_0 1
+#define TEMP_SENSOR_0 13
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -491,9 +491,9 @@
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 
   // Creality Ender-3 - M303 C5 E0 S200 U1
-  #define DEFAULT_Kp 25.33
-  #define DEFAULT_Ki 2.60
-  #define DEFAULT_Kd 61.75
+#define DEFAULT_Kp 29.02
+#define DEFAULT_Ki 2.11
+#define DEFAULT_Kd 99.64
 #endif // PIDTEMP
 
 //===========================================================================
@@ -534,9 +534,9 @@
   //#define DEFAULT_bedKd 230.70
 
   //Ender 3: M303 C8 E-1 S60 U1
-  #define DEFAULT_bedKp 96.63
-  #define DEFAULT_bedKi 19.31
-  #define DEFAULT_bedKd 322.44
+#define DEFAULT_bedKp 109.62
+#define DEFAULT_bedKi 20.51
+#define DEFAULT_bedKd 390.66
 
 #endif // PIDTEMPBED
 
