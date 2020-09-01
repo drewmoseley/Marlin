@@ -415,7 +415,7 @@
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  */
-#define TEMP_SENSOR_0 13
+#define TEMP_SENSOR_0 5
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -508,9 +508,9 @@
   //#define DEFAULT_Kd 440
 
   // Hypercube 300 - "M303 C8 E0 S205 U1"
-  #define DEFAULT_Kp 22.35
-  #define DEFAULT_Ki 2.08
-  #define DEFAULT_Kd 60.17
+  #define DEFAULT_Kp 21.19
+  #define DEFAULT_Ki 1.75
+  #define DEFAULT_Kd 64.02
 #endif // PIDTEMP
 
 //===========================================================================
