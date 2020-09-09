@@ -488,9 +488,9 @@
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
 
   // Creality Ender-3 - M303 C5 E0 S200 U1
-#define DEFAULT_Kp 29.02
-#define DEFAULT_Ki 2.11
-#define DEFAULT_Kd 99.64
+  #define DEFAULT_Kp 25.17
+  #define DEFAULT_Ki 2.22
+  #define DEFAULT_Kd 71.28
 #endif // PIDTEMP
 
 //===========================================================================
@@ -531,10 +531,9 @@
   //#define DEFAULT_bedKd 230.70
 
   //Ender 3: M303 C8 E-1 S60 U1
-#define DEFAULT_bedKp 109.62
-#define DEFAULT_bedKi 20.51
-#define DEFAULT_bedKd 390.66
-
+  #define DEFAULT_bedKp 100.19
+  #define DEFAULT_bedKi 18.07
+  #define DEFAULT_bedKd 370.41
 #endif // PIDTEMPBED
 
 #if EITHER(PIDTEMP, PIDTEMPBED)
