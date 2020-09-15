@@ -556,9 +556,9 @@
   //#define DEFAULT_bedKd 1675.16
 
   // Hypercube 300: "M303 C8 E-1 S60 U1"
-  #define DEFAULT_bedKp 134.08
-  #define DEFAULT_bedKi 10.62
-  #define DEFAULT_bedKd 1128.26
+  #define DEFAULT_bedKp 152.14
+  #define DEFAULT_bedKi 11.85
+  #define DEFAULT_bedKd 1302.14
 #endif // PIDTEMPBED
 
 #if EITHER(PIDTEMP, PIDTEMPBED)
