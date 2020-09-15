@@ -16,7 +16,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
  */
 
@@ -179,7 +179,7 @@
     report_xyze(from_steppers);
 
     const xyze_float_t diff = from_steppers - leveled;
-    SERIAL_ECHOPGM("Diff: ");
+    SERIAL_ECHOPGM("Diff:   ");
     report_xyze(diff);
   }
 
