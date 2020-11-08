@@ -505,9 +505,9 @@
   //#define DEFAULT_Kd 440
 
   // Hypercube 300 - "M303 C8 E0 S205 U1"
-  #define DEFAULT_Kp 17.64
-  #define DEFAULT_Ki 1.02
-  #define DEFAULT_Kd 76.11
+  #define DEFAULT_Kp 22.67
+  #define DEFAULT_Ki 1.55
+  #define DEFAULT_Kd 83.13
 #endif // PIDTEMP
 
 //===========================================================================
@@ -556,9 +556,9 @@
   //#define DEFAULT_bedKd 1675.16
 
   // Hypercube 300: "M303 C8 E-1 S60 U1"
-  #define DEFAULT_bedKp 152.14
-  #define DEFAULT_bedKi 11.85
-  #define DEFAULT_bedKd 1302.14
+  #define DEFAULT_bedKp 41.37
+  #define DEFAULT_bedKi 6.46
+  #define DEFAULT_bedKd 176.70
 #endif // PIDTEMPBED
 
 #if EITHER(PIDTEMP, PIDTEMPBED)
@@ -1000,7 +1000,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 28, 6, -0.285 }
+#define NOZZLE_TO_PROBE_OFFSET { 28, 6, -0.83 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1046,7 +1046,7 @@
 #define Z_CLEARANCE_MULTI_PROBE     5 // Z Clearance between multiple probes
 #define Z_AFTER_PROBING             5 // Z position after probing is done
 
-#define Z_PROBE_LOW_POINT          -2 // Farthest distance below the trigger-point to go before stopping
+#define Z_PROBE_LOW_POINT          -5 // Farthest distance below the trigger-point to go before stopping
 
 // For M851 give a range for adjusting the Z probe offset
 #define Z_PROBE_OFFSET_RANGE_MIN -20
