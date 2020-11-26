@@ -488,9 +488,9 @@
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
 
   // Creality Ender-3 - M303 C5 E0 S200 U1
-  #define DEFAULT_Kp 27.21
-  #define DEFAULT_Ki 3.28
-  #define DEFAULT_Kd 56.42
+  #define DEFAULT_Kp 24.91
+  #define DEFAULT_Ki 2.35
+  #define DEFAULT_Kd 66.12
 #endif // PIDTEMP
 
 //===========================================================================
