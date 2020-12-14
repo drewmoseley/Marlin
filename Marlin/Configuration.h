@@ -415,7 +415,7 @@
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  */
-#define TEMP_SENSOR_0 13
+#define TEMP_SENSOR_0 5
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -504,9 +504,9 @@
   #else
     // ANET A8 Custom E3DV6 Extruder at 210 Degree Celsius and 100% Fan
     // Drew: "M303 C8 E0 S205 U1"
-    #define DEFAULT_Kp 10.59
-    #define DEFAULT_Ki 0.56
-    #define DEFAULT_Kd 50.18
+    #define DEFAULT_Kp 10.61
+    #define DEFAULT_Ki 0.50
+    #define DEFAULT_Kd 56.69
   #endif
 #endif // PIDTEMP
 
@@ -552,9 +552,9 @@
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
   // ANET A8 Custom
   // Drew: "M303 C8 E-1 S60 U1"
-  #define DEFAULT_bedKp 108.01
-  #define DEFAULT_bedKi 21.58
-  #define DEFAULT_bedKd 360.41
+  #define DEFAULT_bedKp 103.02
+  #define DEFAULT_bedKi 20.56
+  #define DEFAULT_bedKd 344.09
 #endif // PIDTEMPBED
 
 #if EITHER(PIDTEMP, PIDTEMPBED)
