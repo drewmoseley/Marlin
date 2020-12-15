@@ -504,9 +504,9 @@
   #else
     // ANET A8 Custom E3DV6 Extruder at 210 Degree Celsius and 100% Fan
     // Drew: "M303 C8 E0 S205 U1"
-    #define DEFAULT_Kp 10.61
-    #define DEFAULT_Ki 0.50
-    #define DEFAULT_Kd 56.69
+    #define DEFAULT_Kp 9.35
+    #define DEFAULT_Ki 0.40
+    #define DEFAULT_Kd 54.18
   #endif
 #endif // PIDTEMP
 
