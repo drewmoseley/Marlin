@@ -415,7 +415,7 @@
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  */
-#define TEMP_SENSOR_0 5
+#define TEMP_SENSOR_0 13
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -504,10 +504,10 @@
   #else
     // ANET A8 Custom E3DV6 Extruder at 210 Degree Celsius and 100% Fan
     // Drew: "M303 C8 E0 S205 U1"
-     #define DEFAULT_Kp 8.99
-     #define DEFAULT_Ki 0.36
-     #define DEFAULT_Kd 56.40
-#endif
+    #define DEFAULT_Kp 11.40
+    #define DEFAULT_Ki 0.52
+    #define DEFAULT_Kd 63.02
+  #endif
 #endif // PIDTEMP
 
 //===========================================================================
@@ -561,7 +561,7 @@
   //#define PID_DEBUG             // Sends debug data to the serial port. Use 'M303 D' to toggle activation.
   //#define PID_OPENLOOP          // Puts PID in open loop. M104/M140 sets the output power from 0 to PID_MAX
   //#define SLOW_PWM_HEATERS      // PWM with very low frequency (roughly 0.125Hz=8s) and minimum state time of approximately 1s useful for heaters driven by a relay
-  #define PID_FUNCTIONAL_RANGE 10 // If the temperature difference between the target temperature and the actual temperature
+  #define PID_FUNCTIONAL_RANGE 25 // If the temperature difference between the target temperature and the actual temperature
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 #endif
 
@@ -751,7 +751,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 411 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 419 }
 
 /**
  * Default Max Feed Rate (mm/s)
