@@ -500,9 +500,9 @@
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
     // Creality Ender-3 - M303 C5 E0 S200 U1
-    #define DEFAULT_Kp 22.93
-    #define DEFAULT_Ki 2.04
-    #define DEFAULT_Kd 64.56
+    #define DEFAULT_Kp 24.94
+    #define DEFAULT_Ki 2.35
+    #define DEFAULT_Kd 66.09
   #endif
 #endif // PIDTEMP
 
@@ -990,7 +990,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -50, -4, -2.7 }
+#define NOZZLE_TO_PROBE_OFFSET { -30.12,8 -0.503, -2.7 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
