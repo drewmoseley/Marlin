@@ -745,7 +745,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 100 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 82, 80.6, 409, 100 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -990,7 +990,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -30.12,8 -0.503, -2.7 }
+#define NOZZLE_TO_PROBE_OFFSET { -30.12,8 -0.503, -2.18 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
