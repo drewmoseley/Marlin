@@ -505,9 +505,9 @@
     //#define DEFAULT_Ki   1.08
     //#define DEFAULT_Kd 114.00
     // Hypercube 300 - "M303 C8 E0 S205 U1"
-    #define DEFAULT_Kp 14.21
-    #define DEFAULT_Ki 0.85
-    #define DEFAULT_Kd 59.23
+    #define DEFAULT_Kp 13.64
+    #define DEFAULT_Ki 0.79
+    #define DEFAULT_Kd 58.92
   #endif
 #endif // PIDTEMP
 
@@ -561,7 +561,7 @@
   //#define PID_DEBUG             // Sends debug data to the serial port. Use 'M303 D' to toggle activation.
   //#define PID_OPENLOOP          // Puts PID in open loop. M104/M140 sets the output power from 0 to PID_MAX
   //#define SLOW_PWM_HEATERS      // PWM with very low frequency (roughly 0.125Hz=8s) and minimum state time of approximately 1s useful for heaters driven by a relay
-  #define PID_FUNCTIONAL_RANGE 10 // If the temperature difference between the target temperature and the actual temperature
+  #define PID_FUNCTIONAL_RANGE 25 // If the temperature difference between the target temperature and the actual temperature
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 #endif
 
@@ -996,7 +996,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 38, 6, -1.9 }
+#define NOZZLE_TO_PROBE_OFFSET { 38, 6, -0.475 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
