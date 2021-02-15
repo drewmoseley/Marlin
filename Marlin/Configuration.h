@@ -504,9 +504,9 @@
   #else
     // ANET A8 Custom E3DV6 Extruder at 210 Degree Celsius and 100% Fan
     // Drew: "M303 C8 E0 S205 U1"
-    #define DEFAULT_Kp 11.40
-    #define DEFAULT_Ki 0.52
-    #define DEFAULT_Kd 63.02
+    #define DEFAULT_Kp 11.73
+    #define DEFAULT_Ki 0.55
+    #define DEFAULT_Kd 62.75
   #endif
 #endif // PIDTEMP
 
@@ -552,9 +552,9 @@
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
   // ANET A8 Custom
   // Drew: "M303 C8 E-1 S60 U1"
-  #define DEFAULT_bedKp 104.39
-  #define DEFAULT_bedKi 20.86
-  #define DEFAULT_bedKd 348.33
+  #define DEFAULT_bedKp 110.19
+  #define DEFAULT_bedKi 21.54
+  #define DEFAULT_bedKd 375.73
 #endif // PIDTEMPBED
 
 #if EITHER(PIDTEMP, PIDTEMPBED)
@@ -751,7 +751,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 419 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 409 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -997,7 +997,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 38, 0, -1.3 }
+#define NOZZLE_TO_PROBE_OFFSET { 38, 0, -0.7 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
