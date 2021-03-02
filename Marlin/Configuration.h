@@ -500,9 +500,9 @@
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
     // Creality Ender-3 - M303 C5 E0 S200 U1
-    #define DEFAULT_Kp 24.94
-    #define DEFAULT_Ki 2.35
-    #define DEFAULT_Kd 66.09
+    #define DEFAULT_Kp 31.02
+    #define DEFAULT_Ki 3.50
+    #define DEFAULT_Kd 68.78
   #endif
 #endif // PIDTEMP
 
@@ -546,9 +546,9 @@
   //#define DEFAULT_bedKd 305.4
 
   //Ender 3: M303 C8 E-1 S60 U1
-  #define DEFAULT_bedKp 120.43
-  #define DEFAULT_bedKi 24.06
-  #define DEFAULT_bedKd 401.83
+  #define DEFAULT_bedKp 106.67
+  #define DEFAULT_bedKi 21.31
+  #define DEFAULT_bedKd 355.94
 #endif // PIDTEMPBED
 
 #if EITHER(PIDTEMP, PIDTEMPBED)
