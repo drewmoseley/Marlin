@@ -546,9 +546,9 @@
   //#define DEFAULT_bedKd 305.4
 
   //Ender 3: M303 C8 E-1 S60 U1
-  #define DEFAULT_bedKp 106.67
-  #define DEFAULT_bedKi 21.31
-  #define DEFAULT_bedKd 355.94
+  #define DEFAULT_bedKp 98.78
+  #define DEFAULT_bedKi 18.64
+  #define DEFAULT_bedKd 349.06
 #endif // PIDTEMPBED
 
 #if EITHER(PIDTEMP, PIDTEMPBED)
