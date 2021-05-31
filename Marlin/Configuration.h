@@ -502,11 +502,11 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    // ANET A8 Custom E3DV6 Extruder at 210 Degree Celsius and 100% Fan
+    // ANET A8 210 Degree Celsius and 100% Fan
     // Drew: "M303 C8 E0 S205 U1"
-    #define DEFAULT_Kp 17.05
-    #define DEFAULT_Ki 1.14
-    #define DEFAULT_Kd 63.87
+    #define DEFAULT_Kp 19.33
+    #define DEFAULT_Ki 1.42
+    #define DEFAULT_Kd 65.82
   #endif
 #endif // PIDTEMP
 
@@ -552,9 +552,9 @@
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
   // ANET A8 Custom
   // Drew: "M303 C8 E-1 S60 U1"
-  #define DEFAULT_bedKp 110.48
-  #define DEFAULT_bedKi 21.14
-  #define DEFAULT_bedKd 384.82
+  #define DEFAULT_bedKp 117.27
+  #define DEFAULT_bedKi 23.43
+  #define DEFAULT_bedKd 391.29
 #endif // PIDTEMPBED
 
 #if EITHER(PIDTEMP, PIDTEMPBED)
@@ -1010,7 +1010,7 @@
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
 
 // Feedrate (mm/min) for the "accurate" probe of each point
-#define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 8)
+#define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 2)
 
 /**
  * Multiple Probing
@@ -1325,7 +1325,7 @@
 
   //#define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
-  #define MESH_INSET  12            // Set Mesh bounds as an inset region of the bed
+  #define MESH_INSET  15            // Set Mesh bounds as an inset region of the bed
   #define GRID_MAX_POINTS_X 5       // Don't use more than 15 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
