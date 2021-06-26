@@ -415,7 +415,7 @@
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  */
-#define TEMP_SENSOR_0 13
+#define TEMP_SENSOR_0 1
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -504,9 +504,9 @@
   #else
     // ANET A8 Custom E3DV6 Extruder at 210 Degree Celsius and 100% Fan
     // Drew: "M303 C8 E0 S205 U1"
-    #define DEFAULT_Kp 17.05
-    #define DEFAULT_Ki 1.14
-    #define DEFAULT_Kd 63.87
+    #define DEFAULT_Kp 22.82
+    #define DEFAULT_Ki 1.19
+    #define DEFAULT_Kd 108.91
   #endif
 #endif // PIDTEMP
 
@@ -997,7 +997,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 36, 0, -2.5 }
+#define NOZZLE_TO_PROBE_OFFSET { 36, 0, -1.1 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
