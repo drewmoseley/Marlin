@@ -500,9 +500,9 @@
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
     // Creality Ender-3 - M303 C5 E0 S200 U1
-    #define DEFAULT_Kp 27.75
-    #define DEFAULT_Ki 3.41
-    #define DEFAULT_Kd 56.49
+    #define DEFAULT_Kp 29.32
+    #define DEFAULT_Ki 3.09
+    #define DEFAULT_Kd 69.60
   #endif
 #endif // PIDTEMP
 
@@ -546,9 +546,9 @@
   //#define DEFAULT_bedKd 305.4
 
   //Ender 3: M303 C8 E-1 S60 U1
-  #define DEFAULT_bedKp 98.84
-  #define DEFAULT_bedKi 17.65
-  #define DEFAULT_bedKd 369.03
+  #define DEFAULT_bedKp 105.34
+  #define DEFAULT_bedKi 20.65
+  #define DEFAULT_bedKd 358.19
 #endif // PIDTEMPBED
 
 #if EITHER(PIDTEMP, PIDTEMPBED)
@@ -990,7 +990,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -44, -6, -3.5 }
+#define NOZZLE_TO_PROBE_OFFSET { -44, -6, -3.2 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
