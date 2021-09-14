@@ -584,9 +584,9 @@
   #else
     // ANET A8 Custom E3DV6 Extruder at 210 Degree Celsius and 100% Fan
     // Drew: "M303 C8 E0 S205 U1"
-    #define DEFAULT_Kp 18.45
-    #define DEFAULT_Ki 1.06
-    #define DEFAULT_Kd 80.49
+    #define DEFAULT_Kp 15.21
+    #define DEFAULT_Ki 0.82
+    #define DEFAULT_Kd 70.86
   #endif
 #endif // PIDTEMP
 
@@ -632,9 +632,9 @@
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
   // ANET A8 Custom
   // Drew: "M303 C8 E-1 S60 U1"
-  #define DEFAULT_bedKp 124.07
-  #define DEFAULT_bedKi 24.79
-  #define DEFAULT_bedKd 413.99
+  #define DEFAULT_bedKp 115.57
+  #define DEFAULT_bedKi 23.00
+  #define DEFAULT_bedKd 387.17
 #endif // PIDTEMPBED
 
 //===========================================================================
