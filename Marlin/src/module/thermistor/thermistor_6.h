@@ -21,8 +21,10 @@
  */
 #pragma once
 
-// R25 = 100 kOhm, beta25 = 4092 K, 8.2 kOhm pull-up, 100k Epcos (?) thermistor
 constexpr temp_entry_t temptable_6[] PROGMEM = {
+#if 0
+  // https://smile.amazon.com/gp/product/B07F3SMRLJ/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1
+  // ???? R25 = 100 kOhm, beta25 = 4092 K, 8.2 kOhm pull-up, 100k Epcos (?) thermistor
   { OV(   1), 350 },
   { OV(  28), 250 }, // top rating 250C
   { OV(  31), 245 },
@@ -61,4 +63,39 @@ constexpr temp_entry_t temptable_6[] PROGMEM = {
   { OV( 978),  22 },
   { OV(1008),   3 },
   { OV(1023),   0 } // to allow internal 0 degrees C
+#else
+  // Hijacked this sensor # for: https://smile.amazon.com/gp/product/B07F3SMRLJ/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
+  {    1 , 350 },
+  {  239 , 250 }, // 245
+  {  276 , 242 },
+  {  311 , 234 },
+  {  349 , 228 },
+  {  384 , 222 },
+  {  430 , 216 },
+  {  472 , 210 },
+  {  519 , 205 },
+  {  569 , 200 },
+  {  586 , 198 },
+  {  683 , 189 },
+  {  792 , 180 },
+  {  908 , 172 },
+  { 1054 , 163 },
+  { 1213 , 154 },
+  { 1389 , 146 },
+  { 1582 , 137 },
+  { 1748 , 130 },
+  { 1910 , 124 },
+  { 2143 , 115 },
+  { 2378 , 107 },
+  { 2609 ,  98 },
+  { 2835 ,  90 },
+  { 3054 ,  81 },
+  { 3249 ,  72 },
+  { 3416 ,  64 },
+  { 3487 ,  60 },
+  { 3645 ,  50 },
+  { 3768 ,  40 },
+  { 3896 ,  30 },
+  { 4095 ,   0 } // to allow internal 0 degrees C
+#endif
 };
