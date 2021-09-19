@@ -580,9 +580,9 @@
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
     // Creality Ender-3 - M303 C5 E0 S200 U1
-    #define DEFAULT_Kp 21.29
-    #define DEFAULT_Ki 2.31
-    #define DEFAULT_Kd 48.96
+    #define DEFAULT_Kp 29.63
+    #define DEFAULT_Ki 3.72
+    #define DEFAULT_Kd 58.99
   #endif
 #endif // PIDTEMP
 
@@ -626,9 +626,9 @@
   //#define DEFAULT_bedKd 305.4
 
   //Ender 3: M303 C8 E-1 S60 U1
-  #define DEFAULT_bedKp 105.18
-  #define DEFAULT_bedKi 20.46
-  #define DEFAULT_bedKd 360.41
+  #define DEFAULT_bedKp 102.90
+  #define DEFAULT_bedKi 18.49
+  #define DEFAULT_bedKd 381.79
 #endif // PIDTEMPBED
 
 //===========================================================================
@@ -899,7 +899,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 140 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 100 }
 
 /**
  * Default Max Feed Rate (mm/s)
