@@ -580,9 +580,9 @@
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
     // Creality Ender-3 - M303 C5 E0 S200 U1
-    #define DEFAULT_Kp 30.13
-    #define DEFAULT_Ki 3.21
-    #define DEFAULT_Kd 70.80
+    #define DEFAULT_Kp 24.56
+    #define DEFAULT_Ki 2.74
+    #define DEFAULT_Kd 55.09
 #endif
 #endif // PIDTEMP
 
