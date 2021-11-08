@@ -905,7 +905,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 409 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 100, 400, 409 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1157,7 +1157,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 36, 0, -0.76 }
+#define NOZZLE_TO_PROBE_OFFSET { 33, 0, -0.76 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1347,11 +1347,11 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE 210
-#define Y_BED_SIZE 210
+#define X_BED_SIZE 220
+#define Y_BED_SIZE 220
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -25
+#define X_MIN_POS -20
 #define Y_MIN_POS -18
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
