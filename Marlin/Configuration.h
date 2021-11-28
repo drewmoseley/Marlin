@@ -602,9 +602,9 @@
     #define DEFAULT_Kd_LIST {  76.55,  76.55 }
   #else
     // Creality Ender-3 - M303 C5 E0 S200 U1
-    #define DEFAULT_Kp 24.56
-    #define DEFAULT_Ki 2.74
-    #define DEFAULT_Kd 55.09
+    #define DEFAULT_Kp 37.41
+    #define DEFAULT_Ki 5.92
+    #define DEFAULT_Kd 59.12
   #endif
 #endif // PIDTEMP
 
@@ -642,9 +642,9 @@
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
   //Ender 3: M303 C8 E-1 S60 U1
-  #define DEFAULT_bedKp 85.91
-  #define DEFAULT_bedKi 17.16
-  #define DEFAULT_bedKd 286.65
+  #define DEFAULT_bedKp 82.46
+  #define DEFAULT_bedKi 14.94
+  #define DEFAULT_bedKd 303.44
 #endif // PIDTEMPBED
 
 //===========================================================================
