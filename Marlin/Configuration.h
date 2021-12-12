@@ -584,9 +584,9 @@
   #else
     // ANET A8 Custom E3DV6 Extruder at 210 Degree Celsius and 100% Fan
     // Drew: "M303 C8 E0 S205 U1"
-    #define DEFAULT_Kp 16.24
-    #define DEFAULT_Ki 0.91
-    #define DEFAULT_Kd 72.48
+    #define DEFAULT_Kp 18.87
+    #define DEFAULT_Ki 1.15
+    #define DEFAULT_Kd 77.16
   #endif
 #endif // PIDTEMP
 
@@ -1351,12 +1351,12 @@
 #define Y_BED_SIZE 220
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -20
+#define X_MIN_POS -29
 #define Y_MIN_POS -18
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 240
+#define Z_MAX_POS 220
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
 //#define J_MIN_POS 0
