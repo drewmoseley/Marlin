@@ -602,10 +602,10 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    // DREW: Creality Ender-3 - M303 C5 E0 S200 U1 
-    #define DEFAULT_Kp  21.73
-    #define DEFAULT_Ki   1.54
-    #define DEFAULT_Kd  76.55
+    // DREW: Creality Ender-3 - M303 C5 E0 S200 U1
+    #define DEFAULT_Kp 29.55
+    #define DEFAULT_Ki 3.37
+    #define DEFAULT_Kd 64.71
   #endif
 #endif // PIDTEMP
 
@@ -645,9 +645,9 @@
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
   // DREW: Ender 3: M303 C8 E-1 S60 U1
-#define DEFAULT_bedKp 41.78
-  #define DEFAULT_bedKi 7.32
-  #define DEFAULT_bedKd 158.93
+  #define DEFAULT_bedKp 64.62
+  #define DEFAULT_bedKi 12.15
+  #define DEFAULT_bedKd 229.20
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -700,7 +700,7 @@
   //#define PID_DEBUG             // Sends debug data to the serial port. Use 'M303 D' to toggle activation.
   //#define PID_OPENLOOP          // Puts PID in open loop. M104/M140 sets the output power from 0 to PID_MAX
   //#define SLOW_PWM_HEATERS      // PWM with very low frequency (roughly 0.125Hz=8s) and minimum state time of approximately 1s useful for heaters driven by a relay
-  #define PID_FUNCTIONAL_RANGE 10 // If the temperature difference between the target temperature and the actual temperature
+  #define PID_FUNCTIONAL_RANGE 25 // If the temperature difference between the target temperature and the actual temperature
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 #endif
 
@@ -2188,7 +2188,7 @@
 // If you have a speaker that can produce tones, enable it here.
 // By default Marlin assumes you have a buzzer with a fixed frequency.
 //
-#define SPEAKER
+//#define SPEAKER
 
 //
 // The duration and frequency for the UI feedback sound.
