@@ -62,7 +62,7 @@
 #define TEMP_BED_PIN         2 //A2
 
 #define HEATER_0_PIN         3 //PE5
-#define TEMP_0_PIN           0 //A0
+#define TEMP_0_PIN           1 //A1
 
 #define HEATER_1_PIN        -1
 #define TEMP_1_PIN           1 //A1
