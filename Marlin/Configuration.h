@@ -603,9 +603,9 @@
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
     // DREW: Creality Ender-3 - M303 C5 E0 S200 U1
-    #define DEFAULT_Kp 34.74
-    #define DEFAULT_Ki 4.77
-    #define DEFAULT_Kd 63.22
+    #define DEFAULT_Kp 37.07
+    #define DEFAULT_Ki 5.09
+    #define DEFAULT_Kd 67.47
 #endif
 #endif // PIDTEMP
 
@@ -645,9 +645,9 @@
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
   // DREW: Ender 3: M303 C8 E-1 S60 U1
-  #define DEFAULT_bedKp 53.86
-  #define DEFAULT_bedKi 9.83
-  #define DEFAULT_bedKd 196.77
+  #define DEFAULT_bedKp 74.61
+  #define DEFAULT_bedKi 14.35
+  #define DEFAULT_bedKd 258.65
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -1183,7 +1183,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -41, -7, -3.01 }
+#define NOZZLE_TO_PROBE_OFFSET { -40, -5, -1.2 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
