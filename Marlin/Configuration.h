@@ -670,9 +670,9 @@
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
     // DREW: Creality Ender-3 - M303 C5 E0 S200 U1
-    #define DEFAULT_Kp 37.07
-    #define DEFAULT_Ki 5.09
-    #define DEFAULT_Kd 67.47
+    #define DEFAULT_Kp 31.62
+    #define DEFAULT_Ki 3.88
+    #define DEFAULT_Kd 64.51
   #endif
 #endif
 
@@ -755,9 +755,9 @@
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
   // DREW: Ender 3: M303 C8 E-1 S60 U1
-  #define DEFAULT_bedKp 74.61
-  #define DEFAULT_bedKi 14.35
-  #define DEFAULT_bedKd 258.65
+  #define DEFAULT_bedKp 85.62
+  #define DEFAULT_bedKi 16.72
+  #define DEFAULT_bedKd 292.24
 #endif // PIDTEMPBED
 
 //===========================================================================
