@@ -1214,7 +1214,7 @@ void DGUSScreenHandler::HandleMotorLockUnlock(DGUS_VP_Variable &var, void *val_p
 void DGUSScreenHandler::HandleScreenVersion(DGUS_VP_Variable &var, void *val_ptr) {
   DEBUG_ECHOLNPGM("HandleScreenVersion");
   
-  uint16_t actualScreenVersion = swap16(*(uint16_t*)val_ptr);
+  uint16_t actualScreenVersion = EXPECTED_UI_VERSION_MAJOR;
 
   SERIAL_ECHOLNPAIR("DWIN version received: ", actualScreenVersion);
   SERIAL_ECHOLNPAIR("We expected DWIN version: ", EXPECTED_UI_VERSION_MAJOR);
